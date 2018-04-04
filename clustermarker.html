@@ -1,7 +1,7 @@
 <html>
     <head>
         <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-        <title>Left Colour</title>
+        <title>SIG</title>
         <style>
             body {
                 background-color: #3cccf0;
@@ -68,7 +68,7 @@
 	     <tr>
 		<td height="200" colspan="2" align="left" bgcolor="#ffffff">
 			<font color="gray">&emsp;Info Marker</font><br>
-			<input class="input" type="text">
+			<textarea class="input" rows="4" cols="20" name='info' id='info'></textarea>
 		</td>
 	      </tr>
 	      <tr>
@@ -80,6 +80,7 @@
 	</form>
 	 <script>
 		var map;
+		var markers=[]; 
 		function initMap() {
 			var opts = { 'center': new google.maps.LatLng(-6.952928, 107.638431), 'zoom': 8, 'mapTypeId': google.maps.MapTypeId.ROADMAP }
 			map = new google.maps.Map(document.getElementById('map'), opts);
@@ -87,7 +88,29 @@
 				document.getElementById('Lat').value = event.latLng.lat();
 				document.getElementById('Lng').value = event.latLng.lng();
 			});
+			map.addListener('click', function(event) {
+				addMarker(event.latLng);
+			});
 		} 
+		 function addMarker(location) {
+			var marker = new google.maps.Marker({
+				position: location,
+				map: map
+			});
+			google.maps.event.addListener(marker,'rightclick',function(event){
+				marker.setMap(null);
+				marker = [];
+			});
+			marker.addListener('click',function(){
+                infowindow.open(map,marker);
+			});
+			markers.push(marker);
+		}
+		 function setMapOnAll(map) {
+			for (var i = 0; i < markers.length; i++) {
+				markers[i].setMap(map);
+			}
+		}
 		google.maps.event.addDomListener(window, 'load', init_map);
 	</script>
 	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAulm0zPjZx7guqt4EFi8HOVeN8P8e2cJs&callback=initMap"></script>
