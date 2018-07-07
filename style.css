@@ -1,1 +1,261 @@
-a
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,800,700,600,300);
+ 
+body {
+	background: #eee;
+	margin:0;
+	font-family: 'Open Sans', sans-serif;
+}
+ 
+hr {
+	border:0;
+	background:#88c7e4;
+	height:1px;
+}		
+ 
+header{
+	text-align: center;
+	color: #232323;
+}
+ 
+header .judul{
+	font-size: 17pt;
+}
+ 
+header .deskripsi{
+	font-size: 11pt;
+}
+
+.wrap {
+	width: 1150px;
+	margin:25px auto;
+}
+
+menu{
+	border:none;
+	border:0px;
+	margin:0px;
+	padding:0px;
+	font: 67.5% "Arial", Arial;
+	font-size:14px;
+	font-weight:bold;
+	}
+	.menu ul{
+	background:#2580a2;
+	height:50px;
+	width: 100%;
+	list-style:none;
+	margin:0;
+	padding:0;
+	font-size:14px;
+	font-weight:bold;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	}
+	.menu li{
+	float:left;
+	margin: 8px auto;
+	padding:0px;
+	}
+	#sub {
+		margin-top: 0;
+		background:#2C97DF;
+		color:white;
+		border-top:0;
+		border-left:0;
+		border-right:0;
+		border-bottom:5px solid #2A80B9;
+		padding:8px 18px;
+		text-decoration:none;
+		font-family:sans-serif;
+		font-size:8pt;
+		border-radius: 5px;
+		width: 60%
+	}
+	.menu li a{
+	background:#2580a2;
+	color:#fffdfd;
+	display:block;
+	font-weight:normal;
+	line-height:35px;
+	margin:0px;
+	padding:0px 25px;
+	text-align:center;
+	text-decoration:none;
+	}
+	.menu li form{
+		margin-top:2px;
+		margin-left:560px;
+	}
+	.search {
+		padding:8px 15px;
+		background:rgb(255, 253, 253);
+		border:0px solid #dbdbdb;
+	}
+	.button {
+		position:relative;
+		padding:6px 15px;
+		left:-8px;
+		border:2px solid #53bd84;
+		background-color:#53bd84;
+		color:#fafafa;
+	}
+	.button:hover  {
+		background-color:#fafafa;
+		color:#207cca;
+	}
+	
+	.menu li a:hover, .menu ul li:hover a{
+	background: #2580a2;
+	color:#FFFFFF;
+	text-decoration:none;
+	}
+	.menu li ul{
+	background:#2580a2;
+	display:none;
+	height:auto;
+	padding:0px;
+	margin:0px;
+	border:0px;
+	position:absolute;
+	width:150px;
+	z-index:200;
+	/*top:1em;
+	/*left:0;*/
+	}
+	.menu li:hover ul{
+	display:block;
+	}
+	.menu li li {
+	display:block;
+	float:center;
+	margin:0px;
+	padding:0px;
+	width:150px;
+	}
+	.menu li:hover li a{
+	background:none;
+	}
+	.menu li ul a{
+	display:block;
+	height:35px;
+	font-size:12px;
+	font-style:normal;
+	margin:0px;
+	padding:0px 10px 0px 15px;
+	text-align:left;
+	}
+	.menu li ul a:hover, .menu li ul li:hover a{
+	background:#2580a2;
+	border:0px;
+	color:#ffffff;
+	text-decoration:none;
+	}
+	.menu p{
+	clear:left;
+	}
+.sidebar {
+	float:right;
+	width:275px;
+}
+
+.sidebar .widget1 {
+	text-align: center;
+	padding:5px;
+	margin-top: 0;
+	background:#fff;
+	border-bottom: 2px solid #fff;
+	transition: all 0.5s ease;
+}
+ 
+.sidebar .widget {
+	padding:25px;
+	margin:10px 0 25px;
+	background:#fff;
+	border-bottom: 2px solid #fff;
+	transition: all 0.5s ease;
+}
+ 
+.sidebar .widget:hover {
+	border-bottom: 2px solid #3498db;
+}
+ 
+.sidebar .widget h2 {
+	padding:0;
+	margin:0 0 15px;
+	color:#3498db;
+	font-size: 18px;
+	font-weight:800;
+	text-transform: uppercase;
+}
+ 
+.sidebar .widget p {
+	font-size: 14px;
+}
+ 
+.sidebar .widget p:last-child {
+	margin:0;
+}
+
+ 
+.img {
+	height: 500px;
+	width: 850px;
+}
+.ims{
+	height: 100px;
+	width: 870px;
+}
+ 
+ 
+.post-info {
+	float: right;
+	font-size: 12px;
+	margin: -10px 0 15px;
+	text-transform: uppercase;
+}
+	.simpan {
+		display: block;
+		padding: 7px 2px;
+		margin-bottom: 15px;
+		border-radius: 5px;
+		border: 1px solid #2259f0;
+		background: #2259f0;
+		width:20%;
+		margin-left: 15px;
+	}
+	
+	#map{
+		height: 430px;
+		width: 870px;
+		background: #2580a2;
+	}		
+
+.controls{
+	background-color: #fff;
+        font-family: Roboto;
+        font-size: 15px;
+        font-weight: 300;
+        margin-left: 12px;
+        padding: 0 11px 0 13px;
+		text-overflow: ellipsis;
+		display: block;
+		margin-top:12px;
+		border: 1px solid #2259f0;
+		height:25px;
+        width: 250px;
+}
+
+#floating-panel {
+	position: absolute;
+	margin-top: 150px;
+	top: 10px;
+	left: 25%;
+	z-index: 5;
+	background-color: #fff;
+	padding: 5px;
+	border: 1px solid #999;
+	text-align: center;
+	font-family: 'Roboto','sans-serif';
+	line-height: 30px;
+	padding-left: 10px;
+  }
